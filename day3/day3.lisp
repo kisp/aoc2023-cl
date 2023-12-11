@@ -17,7 +17,7 @@
 
 (defun read-input ()
   (setq *input*
-        (with-open-file (in "/tmp/inp.txt")
+        (with-open-file (in "/tmp/input.txt")
           (loop for line = (read-line in nil)
                 while line
                 collect line)))
