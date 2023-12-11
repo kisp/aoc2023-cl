@@ -15,9 +15,9 @@
     "...$.*...."
     ".664.598.."))
 
-(defun read-input ()
+(defun read-input (&optional (pathname "/tmp/input.txt"))
   (setq *input*
-        (with-open-file (in "/tmp/input.txt")
+        (with-open-file (in pathname)
           (loop for line = (read-line in nil)
                 while line
                 collect line)))
